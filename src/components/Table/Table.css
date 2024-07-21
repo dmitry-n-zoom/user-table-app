@@ -1,0 +1,60 @@
+.user-table {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  cursor: pointer;
+  min-width: 50px;
+}
+
+.user-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Styles for the resizer */
+.resizer {
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: col-resize;
+  user-select: none;
+}
+
+/* Styles for sort indicators */
+.sort-none::after,
+.sort-ascending::after,
+.sort-descending::after {
+  position: absolute;
+  right: 20px; /* Accounts for the resizer */
+}
+
+.sort-none::after {
+  content: " ⬍";
+}
+
+.sort-ascending::after {
+  content: " ↑";
+}
+
+.sort-descending::after {
+  content: " ↓";
+}
